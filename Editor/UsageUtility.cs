@@ -11,7 +11,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	[Serializable]
 	internal class FileUsage

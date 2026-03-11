@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	internal static class KnownAssemblies
 	{

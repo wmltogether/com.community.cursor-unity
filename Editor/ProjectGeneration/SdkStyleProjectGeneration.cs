@@ -10,7 +10,7 @@ using System.Text;
 using UnityEditor.Compilation;
 using UnityEngine;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	internal class SdkStyleProjectGeneration : ProjectGeneration
 	{
@@ -68,7 +68,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 
 			// Supported capabilities
 			GetCapabilityBlock(headerBuilder, "Sdk.props", "Include", SupportedCapabilities);
-		
+
 			headerBuilder.Append(@"  <PropertyGroup>").Append(k_WindowsNewline);
 			headerBuilder.Append(@"    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>").Append(k_WindowsNewline);
 			headerBuilder.Append(@"    <EnableDefaultItems>false</EnableDefaultItems>").Append(k_WindowsNewline);

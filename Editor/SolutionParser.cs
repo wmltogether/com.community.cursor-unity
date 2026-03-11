@@ -8,7 +8,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	internal static class SolutionParser
 	{

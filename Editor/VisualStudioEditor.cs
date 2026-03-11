@@ -16,7 +16,7 @@ using Unity.CodeEditor;
 [assembly: InternalsVisibleTo("Unity.VisualStudio.Standalone.EditorTests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	[InitializeOnLoad]
 	public class VisualStudioEditor : IExternalCodeEditor
@@ -45,7 +45,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 		static void LegacyVisualStudioCodePackageDisabler()
 		{
 			// disable legacy Visual Studio Code packages
-			var editor = CodeEditor.Editor.GetCodeEditorForPath("code.cmd");
+			var editor = CodeEditor.Editor.GetCodeEditorForPath("cursor.cmd");
 			if (editor == null)
 				return;
 
@@ -55,7 +55,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			// only disable the com.unity.ide.vscode package
 			var assembly = editor.GetType().Assembly;
 			var assemblyName = assembly.GetName().Name;
-			if (assemblyName != "Unity.VSCode.Editor")
+			if (assemblyName != "Unity.Cursor.Editor")
 				return;
 
 			CodeEditor.Unregister(editor);
@@ -72,7 +72,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError($"Error detecting Visual Studio installations: {ex}");
+				Debug.LogError($"Error detecting Cursor installations: {ex}");
 				return new Dictionary<string, IVisualStudioInstallation>();
 			}
 		}
@@ -217,7 +217,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			var editorPath = CodeEditor.CurrentEditorInstallation;
 
 			if (!Discovery.TryDiscoverInstallation(editorPath, out var installation)) {
-				Debug.LogWarning($"Visual Studio executable {editorPath} is not found. Please change your settings in Edit > Preferences > External Tools.");
+				Debug.LogWarning($"Cursor executable {editorPath} is not found. Please change your settings in Edit > Preferences > External Tools.");
 				return false;
 			}
 

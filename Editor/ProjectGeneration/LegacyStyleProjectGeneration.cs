@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEditor.Compilation;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 
 	internal class LegacyStyleProjectGeneration : ProjectGeneration

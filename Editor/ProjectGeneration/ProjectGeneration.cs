@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using SR = System.Reflection;
 using System.Security;
 using System.Security.Cryptography;
 using System.Text;
@@ -17,7 +18,7 @@ using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEngine;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	public enum ScriptingLanguage
 	{

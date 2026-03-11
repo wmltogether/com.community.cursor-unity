@@ -5,7 +5,7 @@
 using System;
 using System.IO;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	internal static class Symbols
 	{

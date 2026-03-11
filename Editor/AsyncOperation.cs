@@ -6,7 +6,7 @@
 using System;
 using System.Threading;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	internal class AsyncOperation<T>
 	{

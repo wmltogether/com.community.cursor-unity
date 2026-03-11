@@ -7,7 +7,7 @@ using System;
 using UnityEditor;
 using UnityEditor.Compilation;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	internal static class UnityInstallation
 	{

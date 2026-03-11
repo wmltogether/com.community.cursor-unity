@@ -6,14 +6,14 @@ using System;
 using System.Linq;
 using Unity.CodeEditor;
 
-namespace Microsoft.Unity.VisualStudio.Editor
+namespace Microsoft.Unity.Cursor.Editor
 {
 	internal static class Cli
 	{
 		internal static void Log(string message)
 		{
 			// Use writeline here, instead of UnityEngine.Debug.Log to not include the stacktrace in the editor.log
-			Console.WriteLine($"[VisualStudio.Editor.{nameof(Cli)}] {message}");
+			Console.WriteLine($"[Cursor.Editor.{nameof(Cli)}] {message}");
 		}
 
 		internal static string GetInstallationDetails(IVisualStudioInstallation installation)
@@ -30,7 +30,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			}
 			else
 			{
-				Log($"No Visual Studio installation found in ${installationPath}!");
+				Log($"No Cursor installation found in ${installationPath}!");
 			}
 		}
 
@@ -38,12 +38,12 @@ namespace Microsoft.Unity.VisualStudio.Editor
 		{
 			if (CodeEditor.CurrentEditor is VisualStudioEditor vse)
 			{
-				Log($"Using default editor settings for Visual Studio installation");
+				Log($"Using default editor settings for Cursor installation");
 				GenerateSolutionWith(vse, CodeEditor.CurrentEditorInstallation);
 			}
 			else
 			{
-				Log($"Visual Studio is not set as your default editor, looking for installations");
+				Log($"Cursor is not set as your default editor, looking for installations");
 				try
 				{
 					var installations = Discovery
@@ -75,12 +75,12 @@ namespace Microsoft.Unity.VisualStudio.Editor
 						}
 					} else
 					{
-						Log($"No Visual Studio installation found!");
+						Log($"No Cursor installation found!");
 					}
 				}
 				catch (Exception ex)
 				{
-					Log($"Error detecting Visual Studio installations: {ex}");
+					Log($"Error detecting Cursor installations: {ex}");
 				}
 			}
 		}
